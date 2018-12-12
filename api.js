@@ -17,7 +17,7 @@ app.listen(8000, () => console.log('Listening on port 8000...'));
 // The default URL should remain private facing using localhost for connectivity (example: http://localhost:8000).
 app.get('/', (req, res) => res.status(404).json({
   "status": 404,
-  "message": "Accepted endpoints: POST /block or GET /block/{BLOCK_HEIGHT}"
+  "message": "Available endpoints: POST /block or GET /block/{BLOCK_HEIGHT}"
 }));
 
 /**
@@ -32,7 +32,7 @@ app.get('/block/:height', async (req, res) => {
   } catch (error) {
     res.status(404).json({
       "status": 404,
-      "message": "Block not found"
+      "message": "The height parameter is out of bounds."
     })
   }
 })
@@ -47,13 +47,12 @@ app.post('/block', async (req, res) => {
   if (req.body.body === '' || req.body.body === undefined) {
     res.status(400).json({
       "status": 400,
-      message: "Fill the body parameter"
+      message: "Please post a new block object with body parameter."
     })
-  }
-
+  } else {
   await blockchain.addBlock(new Block(req.body.body))
   const height = await blockchain.getBlockHeight()
   const response = await blockchain.getBlock(height)
-
   res.status(201).send(response)
+  }
 })
