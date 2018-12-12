@@ -1,15 +1,23 @@
 {
-  "name": "project_2",
+  "name": "project 3",
   "version": "1.0.0",
-  "description": "",
+  "description": "RESTful Web API with Node.js Framework.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Hiroyuki Saito",
+  "license": "MIT",
   "dependencies": {
     "crypto-js": "^3.1.9-1",
     "level": "^4.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/psyto/BlockchainND-RESTfulWebAPI.git"
+  },
+  "bugs": {
+    "url": "https://github.com/psyto/BlockchainND-RESTfulWebAPI/issues"
+  },
+  "homepage": "https://github.com/psyto/BlockchainND-RESTfulWebAPI#readme"
 }
