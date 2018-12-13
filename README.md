@@ -1,8 +1,8 @@
 # RESTful Web API with Node.js Framework
 
-In Project 2: Private Blockchain, you solved the challenge of how to persist our blockchain dataset. Your next challenge is to build a RESTful API using a Node.js framework that will interfaces with the private blockchain.
+In Project 2: Private Blockchain, I solved the challenge of how to persist our blockchain dataset. My next challenge is to build a RESTful API using a Node.js framework that will interfaces with the private blockchain.
 
-By configuring an API for your private blockchain you expose functionality that can be consumed by several types of web clients ranging from desktop, mobile, and IoT devices. For your next project, you will be creating a RESTful web API for your private blockchain. The API project will require two endpoints:
+By configuring an API for my private blockchain I expose functionality that can be consumed by several types of web clients ranging from desktop, mobile, and IoT devices. For my next project, I will be creating a RESTful web API for my private blockchain. The API project will require two endpoints:
 ```
 GET block
 POST block
@@ -10,31 +10,16 @@ POST block
 
 ## Select Node.js framework
 
-For your first web service project, you get to select your preferred Node.js framework from the list below:
+For my first web service project, I selected Express.js as my preferred Node.js framework from the list below:
 ```
 Hapi.js
 Express.js
 Sails.js
 ```
 
-### Not sure which one to select?
-
-If you need help selecting a framework, refer to the Lesson: Web Services with Node.js where we quickly overview qualities for each of the Node.js framework.
-
-Additionally, review their framework resources for creating API endpoints with GET/POST and see which one you enjoy working with the most.
-
-## Configure API Service
-
-Imagine you are working with legacy system and have been told the appropriate port to open channels of communication is port 800. Configure your API service accordingly.
-
-URL
-```
-http://localhost:800/block
-```
-
 ## Configure two endpoints
 
-You are tasked to create two endpoints which will allow your application to accept user requests. In this section, we’ll provide resources on how to do so effectively.
+I created the below two endpoints which will allow my application to accept user requests.
 ```
 GET Block Endpoint
 POST Block Endpoint
@@ -82,6 +67,3 @@ content-length: 238
 Connection: close
 {"hash":"ffaffeb2330a12397acc069791323783ef1a1c8aab17ccf2d6788cdab0360b90","height":1,"body":"Testing block with test string data","time":"1531764891","previousBlockHash":"49cce61ec3e6ae664514d5fa5722d86069cf981318fc303750ce66032d0acff3"}
 ```
-
-### Validation
-When posting to localhost:8000/block without any content on the payload, your service should not create a block. Be sure to validate if there is content in the block before creating and adding it to the chain.
